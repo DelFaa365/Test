@@ -28,6 +28,7 @@ public class App {
         }
 
         for (int i = 0; i < slovicka.length; i++) {
+            
             for (int j = 0; j < znaky.length; j++) {
                 for (int j2 = 0; j2 < 8; j2++) {
                     if(slovicka[i] == znaky[j][j2]){
@@ -46,16 +47,14 @@ public class App {
             return;
         }
 
-        System.out.print(vysledek);
-
         while(kolikPricist > 0){
-            System.out.print("0");
+            vysledek+="0";
+            if(kolikPricist == 4 || kolikPricist == 5){
+                vysledek+=" ";
+            }
             kolikPricist--;
         }
 
-
-
-
-
+        System.out.print(vysledek);
     }
 }
